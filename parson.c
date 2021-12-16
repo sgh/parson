@@ -1224,7 +1224,7 @@ static int json_serialize_to_buffer_r(const JSON_Value *value, char *buf, int le
             if (written < 0) {
                 return -1;
             }
-            if (written > 0 && !memchr(num_buf, 'e', written) && memchr(num_buf, '.', written)) {
+            if (buf && written > 0 && !memchr(num_buf, 'e', written) && memchr(num_buf, '.', written)) {
                 /* strip tailing zeroes */
                 while (written > 1 && num_buf[written-1] == '0') {
                     written--;
