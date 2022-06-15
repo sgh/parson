@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -O0 -g -Wall -Wextra -std=c89 -pedantic-errors -DTESTS_MAIN
+CFLAGS = -O0 -g -Wall -Wextra -std=c99 -pedantic-errors -DTESTS_MAIN
 
 CPPC = g++
 CPPFLAGS = -O0 -g -Wall -Wextra -DTESTS_MAIN 

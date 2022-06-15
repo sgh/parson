@@ -1223,9 +1223,9 @@ static int json_serialize_to_buffer_r(const JSON_Value *value, char *buf, int le
                 num_buf = buf;
             }
             if (parson_float_format) {
-                written = sprintf(num_buf, parson_float_format, num);
+                written = snprintf(num_buf, PARSON_NUM_BUF_SIZE, parson_float_format, num);
             } else {
-                written = sprintf(num_buf, PARSON_DEFAULT_FLOAT_FORMAT, num);
+                written = snprintf(num_buf, PARSON_NUM_BUF_SIZE, PARSON_DEFAULT_FLOAT_FORMAT, num);
             }
             if (written < 0) {
                 return -1;
